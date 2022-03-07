@@ -3,7 +3,7 @@ import CardComponent from './cards/CardComponent'
 
 const List = ({articles, data}) => {
   return (<>
-    {articles && articles.map(article => (<CardComponent key={article.title} article={article}/>))}
+    {articles && articles.map((article, i) => (<CardComponent key={i} article={article}/>))}
     </>)
 }
 

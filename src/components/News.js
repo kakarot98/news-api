@@ -22,7 +22,7 @@ const News = () => {
       .get(
         `https://newsapi.org/v2/everything?q=${text}&from=2022-03-07&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
       )
-      .then((res) => {setData(res.data); setArticles(res.data.articles); console.log(res.data)})
+      .then((res) => {setData(res.data); setArticles(res.data.articles); console.log(res)})
       .catch((err) => console.log(err));
   };
 
@@ -32,7 +32,7 @@ const News = () => {
       flexDirection: "column",
       alignContent: "center",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
     }}>
       <Search searchText={searchText} setSearchText={setSearchText} handleSubmit={handleSubmit}/>
       {articles.length>1 ? <List data={data} articles={articles}/> : (<div></div>)}
