@@ -13,7 +13,7 @@ const Search = ({ searchText, setSearchText, handleSubmit }) => {
   return (
     <Box
       sx={{
-        width: 500,
+        width: 700,
         maxWidth: "100%",
       }}
     >

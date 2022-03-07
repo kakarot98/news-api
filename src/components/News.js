@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Search from './search/Search'
 import List from './list/List'
+import Box from "@mui/material/Box";
 
 const News = () => {
   const [searchText, setSearchText] = useState("");
@@ -26,10 +27,16 @@ const News = () => {
   };
 
   return (
-    <div>
+    <Box sx={{
+      display: "flex",
+      flexDirection: "column",
+      alignContent: "center",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
       <Search searchText={searchText} setSearchText={setSearchText} handleSubmit={handleSubmit}/>
       {articles.length>1 ? <List data={data} articles={articles}/> : (<div></div>)}
-    </div>
+    </Box>
   );
 };
 

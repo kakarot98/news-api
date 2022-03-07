@@ -37,7 +37,7 @@ const CardComponent = ({article}) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, padding: "4px", margin:"5px" }}>
+    <Card sx={{ maxWidth: 500, padding: ".5rem", margin:"2rem", border:".5rem" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -56,7 +56,7 @@ const CardComponent = ({article}) => {
         component="img"
         height="194"
         image={article.urlToImage}
-        alt="Paella dish"
+        alt={article.title}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
